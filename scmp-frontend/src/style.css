@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #4f46e5;
+  --vendor-color: #059669;
+  --bg-color: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Glassmorphism card utility */
+.card-modern {
+  @apply bg-white rounded-2xl border border-slate-200/80 shadow-card transition-all duration-200;
+}
+.card-modern:hover {
+  @apply shadow-card-hover border-slate-300;
+}
+
+/* Element Plus aesthetic refinement */
+.el-card {
+  border-radius: 1rem !important;
+  border-color: #e2e8f0 !important;
+}
+
+.el-button {
+  border-radius: 0.625rem !important;
+  font-weight: 500 !important;
+}
+
+.el-tag {
+  border-radius: 0.5rem !important;
+  font-weight: 500 !important;
+}
+
+.el-table {
+  border-radius: 0.75rem !important;
+  overflow: hidden;
+  --el-table-header-bg-color: #f8fafc !important;
+  --el-table-row-hover-bg-color: #f1f5f9 !important;
+}
+
+.el-table th.el-table__cell {
+  font-weight: 600 !important;
+  color: #475569 !important;
+}
+
+/* Mobile responsive utility */
+@media (max-width: 768px) {
+  .el-dialog {
+    width: 92% !important;
+    margin: 10px auto !important;
+  }
+  .el-drawer {
+    width: 90% !important;
+  }
+}
